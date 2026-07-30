@@ -176,8 +176,6 @@ services:
         NEXT_PUBLIC_DISABLE_USER: ${NEXT_PUBLIC_DISABLE_USER}
         NEXT_PUBLIC_DISABLE_ACME: ${NEXT_PUBLIC_DISABLE_ACME}
     restart: always
-    env_file:
-      - stack.env
     networks:
       - portal-frontend
 

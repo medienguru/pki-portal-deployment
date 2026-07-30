@@ -31,7 +31,7 @@ services:
       - portal-frontend
       - portal-backend
     env_file:
-      - .env
+      - stack.env
     command:
       - --level
       - "info"
@@ -60,7 +60,7 @@ services:
     networks:
       - portal-backend
     env_file:
-      - .env
+      - stack.env
     command:
       - --level
       - "info"
@@ -95,7 +95,7 @@ services:
       - postgresql
       - domain-rest-interface
     env_file:
-      - .env
+      - stack.env
     command:
       - --level
       - "info"
@@ -128,7 +128,7 @@ services:
       - postgresql
       - pki-service
     env_file:
-      - .env
+      - stack.env
     command:
       - --level
       - "info"
@@ -177,7 +177,7 @@ services:
         NEXT_PUBLIC_DISABLE_ACME: ${NEXT_PUBLIC_DISABLE_ACME}
     restart: always
     env_file:
-      - .env
+      - stack.env
     networks:
       - portal-frontend
 
@@ -204,7 +204,7 @@ services:
       - default
       - portal-frontend
     env_file:
-      - .env
+      - stack.env
     ports:
       - "80:80"
       - "443:443"
